@@ -6,8 +6,6 @@ name: demo
 
 # The type of the application to build.
 type: php:7.0
-build:
-  flavor: php
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
