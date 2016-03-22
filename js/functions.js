@@ -83,7 +83,7 @@
              owl.owlCarousel(config);
           });
         }
-        
+
     }
     /* ---------------------------------------------
      MENU REPONSIIVE
@@ -98,7 +98,7 @@
                 liItem.removeClass('show-submenu');
                 licurrent.parents().each(function (){
                     if($(this).hasClass('menu-item-has-children')){
-                     $(this).addClass('show-submenu');   
+                     $(this).addClass('show-submenu');
                     }
                       if($(this).hasClass('main-menu')){
                           return false;
@@ -118,7 +118,7 @@
                   }
                   else{
                       window.location = href;
-                  } 
+                  }
               }
               // Close all child submenu if parent submenu is closed
                   if ( !licurrent.hasClass('show-submenu') ) {
@@ -131,7 +131,7 @@
               if ( !target.closest('.show-submenu').length || !target.closest('.kt-nav').length ) {
                   $('.show-submenu').removeClass('show-submenu');
               }
-          }); 
+          });
           // On Desktop
           }else{
               $(document).on('mousemove','.kt-nav .menu-item-has-children',function(){
@@ -181,7 +181,7 @@
           }
         }
      }
-     
+
      function kt_get_scrollbar_width() {
         var $inner = jQuery('<div style="width: 100%; height:200px;">test</div>'),
             $outer = jQuery('<div style="width:200px;height:150px; position: absolute; top: 0; left: 0; visibility: hidden; overflow:hidden;"></div>').append($inner),
@@ -216,7 +216,7 @@
 
     function kt_height_full(){
         var height = $(window).outerHeight();
-        $(".full-height").css("height",height);  
+        $(".full-height").css("height",height);
     }
     function kt_width_full(){
         var width = $(window).outerWidth();
@@ -231,7 +231,7 @@
           var animateOut = $(this).data('animateout');
           var animateIn = $(this).data('animatein');
           var smartSpeed = $(this).data('smartspeed');
-          
+
           if(typeof animateOut != 'undefined' ){
             config.animateOut = animateOut;
           }
@@ -263,7 +263,7 @@
                 ).addClass('animated '+ animate).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                     $(this).removeClass('animated '+animate);
                 });
-                
+
             })
           })
         });
@@ -325,7 +325,7 @@
               var austDay = new Date($(this).data('y'),$(this).data('m') - 1,$(this).data('d'),$(this).data('h'),$(this).data('i'),$(this).data('s'));
               $(this).countdown({
                   until: austDay,
-                  labels: labels, 
+                  labels: labels,
                   layout: layout
               });
           });
@@ -361,7 +361,7 @@
              'background-color':bgcolor
             });
          }
-         
+
          if( typeof positiontop != undefined && positiontop !=""){
             content.css({
              'top':positiontop
@@ -432,19 +432,8 @@
     /* ---------------------------------------------
      Init popup
      --------------------------------------------- */
-    function init_popup(){
-        if($(window).width() + kt_get_scrollbar_width() >= 768){
-            if($('body').hasClass('home')){
-                //Open directly via API
-                $.magnificPopup.open({
-                  items: {
-                    src: '<div class="white-popup"><div class="kt-popup-newsletter"><div class="popup-title"><h3>Luckyshop</h3><p class="notice">enter your email and get  <span class="text-primary">25% off</span> YOUR first purchase!</p></div><form class="form-subscribe"><input class="input" placeholder="Your email here" type="text" /><button class="button">NO THANKS!</button><button class="button primary">Enter</button></form><div class="checkbox"><label><input type="checkbox" value="">Dont show this popup again!</label></div></div></div>',  //can be a HTML string, jQuery object, or CSS selector
-                    type: 'inline'
-                  }
-                });
-            }
-        }
-    }
+
+    
     function fireOnResizeEvent() {
         var width, height;
         if (navigator.appName.indexOf("Microsoft") != -1) {
@@ -474,7 +463,8 @@
       kt_auto_width_vertical_menu();
       clone_header_ontop();
       kt_stick_menu();
-      init_popup();
+
+      //init_popup();
     });
     /* ---------------------------------------------
      Scripts resize
@@ -517,7 +507,7 @@
         kt_banner();
         kt_carousel_mobile();
         kt_stick_menu();
-        // CATEGORY FILTER 
+        // CATEGORY FILTER
         $('.slider-range-price').each(function(){
             var min             = $(this).data('min');
             var max             = $(this).data('max');
@@ -538,7 +528,7 @@
             });
         });
 
-        // Scroll top 
+        // Scroll top
         $(document).on('click','.scroll_top',function(){
           $('body,html').animate({scrollTop:0},400);
           return false;
@@ -574,9 +564,9 @@
 
             // other options
           });
-       } 
+       }
 
-       // daily-deal zoom 
+       // daily-deal zoom
 
        $(document).on('click','.block-daily-deal .thumbs a',function(){
          var imagemedium = $(this).data('imagemedium');
@@ -665,7 +655,7 @@
                   }
                 });
                $(window).trigger('resize');
-                
+
             })
             return false;
         })
@@ -713,7 +703,7 @@
                 t.html('SEND MESSAGE');
             })
         })
-        
+
 
     });
 
