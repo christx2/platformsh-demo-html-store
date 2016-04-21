@@ -1,5 +1,5 @@
-#mysql:
-#    type: mysql:10.0
-#    disk: 2048
-#redis:
-#    type: redis
+mysql:
+    type: mysql:10.0
+    disk: 2048
+redis:
+    type: redis

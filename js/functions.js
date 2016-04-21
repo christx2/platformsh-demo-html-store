@@ -476,7 +476,7 @@
       clone_header_ontop();
       kt_stick_menu();
 
-      init_popup();
+      //init_popup();
     });
     /* ---------------------------------------------
      Scripts resize
