@@ -1,7 +1,11 @@
-"http://www.{default}/":
+"https://www.{default}/":
     type: upstream
     upstream: "demo:php"
 
 "http://{default}/":
     type: redirect
     to: "http://www.{default}/"
+
+"https://www.{default}/":
+    type: redirect
+    to: "https://www.{default}/"
