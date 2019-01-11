@@ -17,3 +17,5 @@
 - `platform ssh` to the environment and show the `php -v` version.
 - Merge the environment through the interface and then show the slider in production.
 - `platform ssh` to the `master` environment and show the `php -v` version.
+- Finish by explaining the variables that are inherited and can be overridden and the permissions system to limit access to test environments for example for a 3rd party.
+- If necessary, talk about the snapshot feature.
